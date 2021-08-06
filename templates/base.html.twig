@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block meta_title %}Trayan Ivanov - web developer{% endblock %}</title>
+
+        <meta name="Description" content="{% block meta_description %}Trayan Ivanov - web developer - personal website.{% endblock %}" />
+        <meta name="Keywords" content="{% block meta_keywords %}trayan ivanov,web developer,php,mysql,html,css,javascript,git{% endblock %}" />
+
+        <meta property="fb:app_id" content="158018051261161" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
+        <meta property="og:title" content="{% block og_title %}Trayan Ivanov - web developer{% endblock %}" />
+        <meta property="og:description" content="{% block og_description %}Personal website.{% endblock %}" />
+        <meta property="og:image" content="{% block og_image %}{{ absolute_url(asset('build/images/og.jpg')) }}{% endblock %}" />
+        <meta property="og:url" content="{% block og_url %}{{ url('home') }}{% endblock %}" />
+
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        <link rel="canonical" href="{{ app.request.getSchemeAndHttpHost ~ app.request.baseUrl ~ app.request.pathInfo }}" />
+
+        {{ include('partials/analytics.html.twig') }}
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        {{ include('partials/header.html.twig') }}
+
+        {% block body %}{% endblock %}
+
+        {{ include('partials/footer.html.twig') }}
+    </body>
+</html>

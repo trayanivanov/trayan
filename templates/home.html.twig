@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ include('partials/code.html.twig') }}
+
+    <div class="container about-me">
+        <h3>Hello there!</h3>
+        <p>
+            My name is Trayan Ivanov and this is my personal web site.<br>
+            I am web developer currently located in Sofia, Bulgaria working for <a href="https://clippings.com" target="_blank">Clippings</a> - The all-in-one platform to deliver interior design projects.<br>
+            I have skills in web development, PHP, MySQL, HTML, CSS, JavaScript, Git and some others.<br>
+            I am from small town called Marten, Bulgaria.<br>
+            Hiking, exploring Bulgaria and photography are some of my interests consolidated in <a href="https://backpacknerd.com" target="_blank">Backpack Nerd</a>.
+        </p>
+        <img src="{{ asset('build/images/me.jpg') }}" class="img-fluid" title="Trayan Ivanov - web developer" alt="Trayan Ivanov - web developer" />
+    </div>
+
+    <div class="container contact-me">
+        <h3>Feel free to say Hi!</h3>
+        <p>
+            <i class="bi-envelope-fill"></i> You can ping me at <a href="mailto:trayan.ivanov@gmail.com">my email</a>.<br>
+            <i class="bi-twitter"></i> My <a href="https://twitter.com/trayan_ivanov" target="_blank">Twitter</a> account.<br>
+            <i class="bi-linkedin"></i> My <a href="https://www.linkedin.com/in/trayanivanov" target="_blank">LinkedIn</a> account.
+        </p>
+    </div>
+{% endblock %}
